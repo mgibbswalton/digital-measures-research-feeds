@@ -4,7 +4,7 @@ MAINTAINER Jeff Puckett
 
 COPY . /var/www/html
 
-RUN composer update
+RUN "composer update"
 RUN /var/www/html/docker/install.bash
 
 

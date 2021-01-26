@@ -4,8 +4,9 @@ MAINTAINER Jeff Puckett
 
 COPY . /var/www/html
 
-RUN /var/www/html/docker/install.bash
 RUN composer update
+RUN /var/www/html/docker/install.bash
+
 
 COPY ./docker/entrypoint ./docker/apache2-foreground /usr/local/bin/
 COPY ./docker/vhost.conf /etc/apache2/sites-available/000-default.conf
